@@ -1,5 +1,5 @@
 
-# Proyecto LPPA 2023 - UAI
+# Proyecto DyT Web 2024 - UAI
 
 Repositorio con los avances del Proyecto de la cátedra Desarrollo y Arquitecturas Web de la carrera de Ingeniería en Sistemas de la UAI Rosario
 
