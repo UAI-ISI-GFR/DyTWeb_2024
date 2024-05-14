@@ -22,6 +22,10 @@ header {
     margin-right: auto;
 }
 
+.menu {
+    display: none;
+}
+
 nav{
     background-color: white;
     padding: 2px;
@@ -112,6 +116,7 @@ h1 {
 p{
     font-family: MerriweatherSans,sans-serif;
     font-weight: 300;
+    align-self: auto;
 }
 
 b{
@@ -132,4 +137,31 @@ footer {
 footer a{
     text-decoration: none;
     color: white;
+}
+
+@media (width < 767px) {
+    .menu {
+        display: block;
+    }
+    
+    nav ul{
+        display: none;
+    }
+
+    main section{
+        background-color: white;
+        padding: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main section img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer p a {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
