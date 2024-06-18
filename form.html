@@ -5,51 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 3</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/formstyle.css">
 </head>
 
-<body><!--Etiqueta que no debe faltar-->
-    <main><!--Etiqueta que no debe faltar-->
-        <section id="link-9">
-            <h3>Suscribite para recibir más noticias</h3>
-            <form>
-                <fieldset>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                </fieldset>
-                <fieldset>
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
-                </fieldset>
-                <fieldset>
-                    <label for="genero">Género:</label>
-                    <input type="radio" id="masculino" name="genero" value="masculino" required>
-                    <label for="masculino">Masculino</label><br>
-                    <input type="radio" id="femenino" name="genero" value="femenino">
-                    <label for="femenino">Femenino</label><br><br>
-                </fieldset>
-                <fieldset>
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono"  value="Teléfono" required>
-                </fieldset>
-                <fieldset>
+<body>
+    <header>
+        <img class="logo" src="img/logo.png" alt="Logo">
+            <nav>
+                <img class="menu" src="assets/menu.svg" alt="Menu">
+                <ul>
+                    <li><a href="https://www.muyinteresante.com/actualidad/">ACTUALIDAD</a></li>
+                    <li><a href="https://www.muyinteresante.com/tecnologia/">TECNOLOGÍA</a></li>
+                    <li><a href="https://www.muyinteresante.com/ciencia/">CIENCIA</a></li>
+                    <li><a href="https://www.muyinteresante.com/naturaleza/">NATURALEZA</a></li>
+                    <li><a href="https://www.muyinteresante.com/salud/">SALUD</a></li>
+                    <li><a href="https://www.muyinteresante.com/historia/">HISTORIA</a></li>
+                    <li><a href="https://www.muyinteresante.com/ia/">IA AL DÍA</a></li>
+                    <li><a href="https://www.muyinteresante.com/mascotas/">MASCOTAS</a></li>
+                    <li><a href="https://www.muyinteresante.com/curiosidades/">CURIOSIDADES</a></li>
+                    <li><a href="https://www.muyinteresante.com/temas/motor/">MOTOR</a></li>
+                </ul>
+            </nav>
+        </img>
+    </header>
+    <main>
+        <div class="container">
+            <h1 id="formTitle">HOLA</h1>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Nombre Completo:</label>
+                    <input type="text" id="fullName" name="fullName">
+                    <span class="error" id="fullNameError"></span>
+                </div>
+                <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                </fieldset>
-                <fieldset>
-                    <label for="comentario">Comentario:</label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Comentario" required></textarea>
-                </fieldset>
-                <button type="submit">Enviar</button>
-                <a href="index.html"><button type="button">Cancelar</button></a>
-                <button type="reset">Reset</button>
+                    <input type="email" id="email" name="email">
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Repetir Contraseña:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword">
+                    <span class="error" id="confirmPasswordError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="age">Edad:</label>
+                    <input type="number" id="age" name="age">
+                    <span class="error" id="ageError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" id="phone" name="phone">
+                    <span class="error" id="phoneError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address">
+                    <span class="error" id="addressError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="city">Ciudad:</label>
+                    <input type="text" id="city" name="city">
+                    <span class="error" id="cityError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Código Postal:</label>
+                    <input type="text" id="postalCode" name="postalCode">
+                    <span class="error" id="postalCodeError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni">
+                    <span class="error" id="dniError"></span>
+                </div>
+                <div class="form-group button-group">
+                    <button type="button" id="submitButton">Enviar</button>
+                </div>
             </form>
-        </section>  
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div id="modalMessage"></div>
+            </div>
+          </div>
     </main>
-    <footer><!--Etiqueta que no debe faltar-->
+    <footer>
         <img src="img/logo.png" alt="Logo">
         <p>Otras webs <a href="https://www.serpadres.es/">SER PADRES </a><a href="https://www.marie-claire.es/">MARIE CLAIRE </a><a href="https://www.miarevista.es/">MÍA REVISTA </a><a href="https://www.zinetmedia.es/">SER PADRES</a></p>
         <p><a href="https://www.muyinteresante.es/codigo-etico.html">CÓDIGO ÉTICO </a><a href="http://www.zinetmedia.es/zinetmedia/privacidad">POLÍTICA DE PRIVACIDAD </a><a href="https://www.muyinteresante.es/aviso-legal.html">AVISO LEGAL </a><a href="https://www.muyinteresante.es/politica-cookies.html">POLÍTICA DE COOKIES </a><a href="#">CONFIGURACIÓN DE COOKIES </a><a href="mailto:muyinteresante@muyinteresante.es">CONTACTO </a><a href="https://www.zinetmedia.es/zinetmedia/publicidad">PUBLICIDAD</a></p>
         <a href="https://github.com/Notsag88/LPPA_2023_RUIZGASTON" target="_blank">Repositorio de Github</a>
         <p>© 2023 Muy Interesante. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="scripts/validation.js"></script>
 </body>
